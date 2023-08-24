@@ -1,0 +1,248 @@
+.containerGeral {
+    position        : absolute;
+    width           : 99%;
+    height          : 100%;
+    background-color: #e5eaf7;
+    border-radius   : 1rem;
+    margin: auto;
+}
+
+#cardInfo {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    width           : 100vw;
+    height          : 100vh;
+    margin          : 0 auto;
+}
+
+#detail_pokemon_card {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    border-radius   : 1rem;
+    width           : 90%;
+    height          : 90%;
+    margin-left     :-10%;
+}
+
+#divDetalhe {
+    position        : absolute;
+    width           : 80%;
+    margin-top      : 1rem;
+}
+
+.detalhe {
+    width           : 100%;
+    display         : flex;
+    justify-content : space-around;
+}
+
+.card-name {
+    position        : absolute;
+    color           : #fff;
+    font-size       : 2rem;
+    font-weight     : bold;
+    margin-left     : -48%;
+    text-transform  : capitalize;
+    margin-top      : 2%;
+}
+
+.card-number {
+    position        : absolute;
+    color           : #ffffff;
+    opacity         : 0.4;
+    font-size       : 1.4rem;
+    margin-left     : 75%;
+    margin-top      : 3%;
+}
+
+.card-img {
+    margin-bottom   : -10%;
+    width           : 36%;
+    margin-top      : 10%;
+    margin-left     : 25%;
+}
+
+.img-Types {
+    margin-top      : 5%;
+    margin-bottom   : -10%;
+    width           : 100%;
+    display         : flex;
+    list-style      : none;
+}
+
+.cardTypes {
+    display         : flex;
+    flex-direction  : column;
+    margin-top      : 24%;
+    margin-left     : 5%;
+    justify-items   : center;
+    padding         : 2%;
+    font-size       : 1rem;
+    color           : #fff;
+}
+
+.cardType1 {
+    display         : flex;
+    width           : 100%;
+    justify-content : center;
+    border-radius   : .5rem;
+    color           : #fff;
+    filter          : brightness(1.1);
+    align-self      : center;
+}
+
+.cardType2, .cardType3 {
+    width           : 100%;
+    border-radius   : 1rem;
+    background-color: #deef2158;
+    filter          : brightness(1.1);
+    text-align: center;
+}
+
+.btnBack {
+    width           : 100%;
+    height          : 2rem;
+    margin-top      : 30%;
+    background-color: transparent;
+    color           : Blue;
+    border          : solid 1px blue;
+    border-radius   : .5rem;
+    margin-left     : -50% ;
+}
+
+.btnBack:hover {
+    cursor          : pointer ;
+    background-color: #6890F0;
+    transition      : all ease-in-out .5s;
+    color           : yellow;
+}
+
+.footer {
+    margin-top      : 10px;
+    display         : flex;
+    width           : 93%;
+    height          : 39%;
+}
+
+.abilities {
+    position        : absolute;
+    margin-top      : 25%;
+    width           : 40%;
+    height          : 20%;
+    display         : flex;
+    flex-direction  : column;
+    list-style      : none;
+    align-items     : center;
+    border-radius   : 1rem;
+    box-shadow      : 1px -1px 3px 1px #000;
+}
+
+.abilities h3 {
+    align-self      : center;
+    color           : #f8f6f1;
+    text-shadow     : black 0.4px 0.4px 0.4px;
+    font-weight     : bold;
+}
+
+.ability1,
+.ability2 {
+    color           : #fff;
+}
+
+.moves-div {
+    position        : absolute;
+    margin-top      : 25%;
+    width           : 40%;
+    height          : 20%;
+    display         : flex;
+    flex-direction  : column;
+    list-style      : none;
+    align-items     : center;
+    margin-left     : 43%;
+    border-radius   : 1rem;
+    box-shadow      : 1px -1px 3px 1px #000;
+}
+
+.moves-div h3 {
+    color           : #f8f6f1;
+    text-shadow     : black 0.4px 0.4px 0.4px;
+    font-weight     : bold;
+    margin-bottom: 0;
+}
+
+.moves1,
+.moves2,
+.moves3 {
+    color           : #fff;
+    margin-bottom   : .1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width:1036px) {
+    #cardInfo {
+        width: 50%;
+        height: 100%;
+    }
+
+    .card-name {
+        margin: 0 auto;
+    }
+
+    .card-number {
+        margin: 0;
+        margin-top: 7%;
+    }
+
+    .card-img {
+        margin-bottom: -60%;
+    }
+
+    .cardTypes {
+        margin-bottom: -50%;
+    }
+
+    .abilities, .moves-div {
+        width: 20%;
+        height: 20%;
+        margin-top: 40%;
+    }
+    .moves-div {
+        margin-left: 22%;
+    }
+}
+
+@media screen and (min-width: 1036px) and (max-width: 1440px) {
+        #cardInfo {
+        width: 50%;
+        height: 100%;
+    }
+
+    .card-name {
+        margin: 0 auto;
+    }
+
+    .card-number {
+        margin    : 0;
+        margin-top: 7%;
+    }
+
+    .card-img {
+        margin-bottom: -60%;
+    }
+
+    .cardTypes {
+        margin-bottom: -50%;
+    }
+
+    .abilities,
+    .moves-div {
+        width     : 20%;
+        height    : 20%;
+        margin-top: 32%;
+    }
+
+    .moves-div {
+        margin-left: 22%;
+    }
+}

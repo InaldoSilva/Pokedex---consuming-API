@@ -1,27 +1,42 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const loadLessButton = document.getElementById("loadLessButton");
 
 const maxRecords = 151
 const limit = 10
 let offset = 0;
 
 function convertPokemonToLi(pokemon) {
-    return `
-        <li class="pokemon ${pokemon.type}">
-            <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+  /*Add zeros before numbers < 100*/
+  let zeroBeforeNumber;
+  if (pokemon.number < 10) {
+    zeroBeforeNumber = "#00" + pokemon.number;
+  } else if (pokemon.number >= 10 && pokemon.number < 100) {
+    zeroBeforeNumber = "#0" + pokemon.number;
+  } else {
+    zeroBeforeNumber = "#" + pokemon.number;
+  }
 
-            <div class="detail">
-                <ol class="types">
-                    ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
-                </ol>
-
-                <img src="${pokemon.photo}"
-                     alt="${pokemon.name}">
-            </div>
-        </li>
-    `
+  return `<a class="linkCard" href="./pokemon_card.html?id=${pokemon.number}">
+   <li class="pokemon ${pokemon.type}">
+   <span class="number">${zeroBeforeNumber}</span>
+   <span class="name">${pokemon.name}</span>
+   
+    <div class="detail">
+      <ol class="types">
+        <li class="type"></li>
+        <li class="type"></li>
+        ${pokemon.types
+          .map((type) => `<li class="type ${type}">${type}</li>`)
+          .join("")}
+      </ol>
+      <img src="${pokemon.photo}" alt="${pokemon.name}">
+    </div>    
+  </li>
+   `;
 }
+
+/*Paginação*/
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
@@ -45,3 +60,5 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+console.log("total = ", offset + limit);

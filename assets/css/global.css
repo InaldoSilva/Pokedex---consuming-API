@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Cabin:wght@400;500&family=Caveat&family=Cinzel+Decorative&family=Herr+Von+Muellerhoff&family=Pacifico&display=swap');
+
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 .page-title {
-   margin-left: 31%;
+    position: relative;  
 }
 
 body {
@@ -18,6 +20,8 @@ body {
     background-color: #e5eaf7;
 }
 
+/*Pokedex Cards Box-shadow*/
+
 .pokemon {
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.55);
     -moz-box-shadow   : 10px 10px 5px 0px rgba(0, 0, 0, 0.523);
@@ -29,6 +33,17 @@ body {
     cursor: pointer;
     opacity: 70%;
     border: solid 1px white;
+}
+
+.copy {
+    position: absolute;
+    margin-left: 38%;
+    opacity: 50%;
+}
+
+.copy > a {
+    font-family: 'Ceveat', cursive;
+    font-style: italic;
 }
 
 @media screen and (min-width: 992px) {
