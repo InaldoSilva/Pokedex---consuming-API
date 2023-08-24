@@ -17,7 +17,7 @@ function convertPokemonToLi(pokemon) {
     zeroBeforeNumber = "#" + pokemon.number;
   }
 
-  return `<a class="linkCard" href="./pokemon_card.html?id=${pokemon.number}">
+  return `<a class="linkCard" href="./pokemon_card.html?id=${pokemon.number}" target="_blank">
    <li class="pokemon ${pokemon.type}">
    <span class="number">${zeroBeforeNumber}</span>
    <span class="name">${pokemon.name}</span>
