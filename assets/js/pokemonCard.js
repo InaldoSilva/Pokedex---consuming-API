@@ -157,7 +157,7 @@ async function getPokeDetail() {
   if (data.abilities.length > 2) {
     div6.appendChild(liAbil3);
   }
-
+  
   div5.appendChild(div7);
   div7.appendChild(h3moves);
   div7.appendChild(moves1);
